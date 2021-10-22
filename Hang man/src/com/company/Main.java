@@ -50,7 +50,22 @@ public class Main {
                 System.out.println("Insert a letter or your final guess");
                 String tempguess = input.next();
                 if (tempguess.length() >= 2) {
-                    guess = tempguess;
+                    if(tempguess.equalsIgnoreCase(word)){
+                        guess = tempguess;
+                    }
+                    else{
+                        stage++;
+                        System.out.println("wrong");
+                        System.out.println("______");
+                        System.out.println("|  |  ");
+                        System.out.println("|  " + stages[stage][0] + "  ");
+                        System.out.println("| " + stages[stage][2] + "|" + stages[stage][1] + " ");
+                        System.out.println("| " + stages[stage][4] + " " + stages[stage][3] + " ");
+                        System.out.println("|     ");
+                        System.out.println(guess);
+
+                    }
+
                 } else {
                     checker = true;
                     for (int i = 0; i < word.length(); i++) {
@@ -74,12 +89,10 @@ public class Main {
                     System.out.println(guess);
 
                 }
-
-
             }
             while (stage < 5 && !guess.equalsIgnoreCase(word));
             if (guess.equalsIgnoreCase(word)) {
-                System.out.println("That is correct! My word was " + word + ",would you like to play again? press Y");
+                System.out.println("That is correct! My word was " + word + ", would you like to play again? press Y");
             } else {
                 System.out.println("You ran out of chances,the word was " + word + ", would you like to play again? press Y");
             }
@@ -88,6 +101,7 @@ public class Main {
                 play = true;
             }
         }
-        while(play);
+        while (play);
     }
 }
+
