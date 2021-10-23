@@ -36,9 +36,9 @@ public class Main {
             System.out.println("Let's play hangman! What word am I thinking about?");
             System.out.println("______");
             System.out.println("|  |  ");
-            System.out.println("|  " + stages[stage][0] + "  ");
-            System.out.println("| " + stages[stage][2] + "|" + stages[stage][1] + " ");
-            System.out.println("| " + stages[stage][4] + " " + stages[stage][3] + " ");
+            System.out.println("|  " + stages[5-stage][0] + "  ");
+            System.out.println("| " + stages[5-stage][2] + "|" + stages[5-stage][1] + " ");
+            System.out.println("| " + stages[5-stage][4] + " " + stages[5-stage][3] + " ");
             System.out.println("|     ");
             String[] words = {"mario", "glucose", "sinusoid", "hanging", "ship", "computing", "graffiti", "collection", "league", "intelligent"};
             String word = words[random.nextInt(10)];
@@ -58,9 +58,9 @@ public class Main {
                         System.out.println("wrong");
                         System.out.println("______");
                         System.out.println("|  |  ");
-                        System.out.println("|  " + stages[stage][0] + "  ");
-                        System.out.println("| " + stages[stage][2] + "|" + stages[stage][1] + " ");
-                        System.out.println("| " + stages[stage][4] + " " + stages[stage][3] + " ");
+                        System.out.println("|  " + stages[5-stage][0] + "  ");
+                        System.out.println("| " + stages[5-stage][2] + "|" + stages[5-stage][1] + " ");
+                        System.out.println("| " + stages[5-stage][4] + " " + stages[5-stage][3] + " ");
                         System.out.println("|     ");
                         System.out.println(guess);
 
@@ -82,9 +82,9 @@ public class Main {
                     }
                     System.out.println("______");
                     System.out.println("|  |  ");
-                    System.out.println("|  " + stages[stage][0] + "  ");
-                    System.out.println("| " + stages[stage][2] + "|" + stages[stage][1] + " ");
-                    System.out.println("| " + stages[stage][4] + " " + stages[stage][3] + " ");
+                    System.out.println("|  " + stages[5-stage][0] + "  ");
+                    System.out.println("| " + stages[5-stage][2] + "|" + stages[5-stage][1] + " ");
+                    System.out.println("| " + stages[5-stage][4] + " " + stages[5-stage][3] + " ");
                     System.out.println("|     ");
                     System.out.println(guess);
 
@@ -104,4 +104,3 @@ public class Main {
         while (play);
     }
 }
-
